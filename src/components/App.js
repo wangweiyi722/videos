@@ -19,8 +19,9 @@ class App extends React.Component{
     // Render a list of videos
 
     return (
-      <div className="ui container">
+      <div className="ui grid" style={{padding:"50px"}}>
         <SearchBar onSearch={this.onTermSubmit}/>
+        <div className="eight wide column">somediv</div>
         I have {this.state.videos.length} videos.
         <VideoList listOfVideos={this.state.videos}/>
 

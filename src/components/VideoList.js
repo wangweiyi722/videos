@@ -1,9 +1,11 @@
 import React from 'react';
+import VideoItem from './VideoItem';
 
 const VideoList = (props) => {
+  console.log(props.listOfVideos);
   const videos = props.listOfVideos.map((video) => {
-    return <div>1</div>;
+    return <VideoItem videoProp={video}/>;
   });
-  return <div className="image-list">{videos}</div>
+  return <div className="ui items four wide column">{videos}</div>
 }
 export default VideoList;

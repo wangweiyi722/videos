@@ -14,9 +14,6 @@ class VideoItem extends React.Component {
         </a>
         <div className="content">
           <a className="header">{this.props.videoProp.snippet.title}</a>
-          <div className="description">
-            <p>{this.props.videoProp.snippet.description}</p>
-          </div>
         </div>
 
       </div>);

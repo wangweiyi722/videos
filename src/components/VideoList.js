@@ -6,6 +6,6 @@ const VideoList = (props) => {
   const videos = props.listOfVideos.map((video) => {
     return <VideoItem videoProp={video}/>;
   });
-  return <div className="ui items four wide column">{videos}</div>
+  return <div className="ui divided items">{videos}</div>
 }
 export default VideoList;

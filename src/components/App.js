@@ -5,7 +5,7 @@ import youtube from '../apis/youtube';
 
 
 class App extends React.Component{
-  state = {videos:[]};
+  state = {videos:[], selectedVideo:null};
   onTermSubmit = async (term) =>{
     const response = await youtube.get('/search',{
       params:{
@@ -21,9 +21,10 @@ class App extends React.Component{
     return (
       <div className="ui grid" style={{padding:"50px"}}>
         <SearchBar onSearch={this.onTermSubmit}/>
-        <div className="twelve wide column">somediv</div>
-        I have {this.state.videos.length} videos.
-        <VideoList listOfVideos={this.state.videos}/>
+        <div className="eleven wide column">somediv</div>
+
+        <div className="ui items four wide column">{this.state.videos.length} videos returned. <br/><VideoList listOfVideos={this.state.videos}/></div>
+
 
       </div>
   )}

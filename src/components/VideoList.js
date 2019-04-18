@@ -1,10 +1,10 @@
 import React from 'react';
 import VideoItem from './VideoItem';
 
-const VideoList = (props) => {
-  console.log(props.listOfVideos);
-  const videos = props.listOfVideos.map((video) => {
-    return <VideoItem videoProp={video}/>;
+const VideoList = ({listOfVideos, onVideoSelect}) => {
+  console.log(listOfVideos);
+  const videos = listOfVideos.map((video) => {
+    return <VideoItem onVideoSelect={onVideoSelect} videoProp={video}/>;
   });
   return <div className="ui divided items">{videos}</div>
 }

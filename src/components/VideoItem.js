@@ -14,7 +14,7 @@ class VideoItem extends React.Component {
     return (
       <div onClick={() => this.props.onVideoSelect(this.props.videoProp)} className="item">
         <a className="ui tiny image">
-          <img src={this.props.videoProp.snippet.thumbnails.default.url} alt="could not find"/>
+          <img alt={this.props.videoProp.snippet.title} src={this.props.videoProp.snippet.thumbnails.default.url}/>
         </a>
         <div className="content">
           <a className="header">

@@ -26,7 +26,9 @@ onVideoSelect = (video) => {
     return (
       <div className="ui grid" style={{padding:"50px"}}>
         <SearchBar onSearch={this.onTermSubmit}/>
-        <div className="eleven wide column"><VideoDetail video={this.state.selectedVideo}/></div>
+        <div className="eleven wide column">
+          <VideoDetail video={this.state.selectedVideo}/>
+        </div>
 
         <div className="ui items four wide column">{this.state.videos.length} videos returned. <br/><VideoList onVideoSelect={this.onVideoSelect} listOfVideos={this.state.videos}/></div>
 
